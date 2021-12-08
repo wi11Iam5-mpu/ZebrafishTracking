@@ -5,6 +5,7 @@ This repo is for the paper ''Multi-View Contrastive Association Metric for MTMC 
 
 <div align="left">
 <img src="./consistency.gif" width ="300" height ="300" alt="">
+<img src="./consistency_o7.gif" width ="300" height ="300" alt="">
 </div>
 
 # Model
