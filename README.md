@@ -1,5 +1,5 @@
 # ZebrafishTracking
-This repo is for the paper ''Multi-View Contrastive Association Metric for MTMC Tracking:  A Zebrafish Case"
+This repo is for the paper ''Multi-View Contrastive Association Metric for MTMC Tracking:  A 3D Zebrafish Case"
 
 # To be sooning
 
