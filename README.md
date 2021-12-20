@@ -7,6 +7,9 @@ This repo is for the paper ''Multi-View Contrastive Association Metric for MTMC 
 <img src="./consistency.gif" width ="300" height ="300" alt="">
 <img src="./consistency_o7.gif" width ="300" height ="300" alt="">
 </div>
+<img src="./coherency.gif" width ="300" height ="300" alt="">
+</div>
+
 
 # Model
 [resnet18](https://drive.google.com/file/d/1joZMPoQjrmwq0DgPy7p0v-bvtJQ3CWwM/view?usp=sharing)
