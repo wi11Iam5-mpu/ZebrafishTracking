@@ -1,7 +1,7 @@
 # ZebrafishTracking
 This repo is for the paper ''Multi-View Contrastive Association Metric for MTMC Tracking:  A 3D Zebrafish Case"
 
-# To be sooning
+# Coming soon
 
 <div align="left">
 <img src="./consistency.gif" width ="300" height ="300" alt="">
@@ -11,4 +11,4 @@ This repo is for the paper ''Multi-View Contrastive Association Metric for MTMC 
 
 
 # Model
-[resnet18](https://drive.google.com/file/d/1joZMPoQjrmwq0DgPy7p0v-bvtJQ3CWwM/view?usp=sharing)
+[ResNet18](https://drive.google.com/file/d/1joZMPoQjrmwq0DgPy7p0v-bvtJQ3CWwM/view?usp=sharing)
