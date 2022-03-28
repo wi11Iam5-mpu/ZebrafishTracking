@@ -10,5 +10,5 @@ This repo is for the paper "3D Visual Tracking of Zebrafish Based on Multi-View 
 </div>
 
 
-# Traind weight
+# Model
 [ResNet-18 backbone](https://drive.google.com/file/d/1joZMPoQjrmwq0DgPy7p0v-bvtJQ3CWwM/view?usp=sharing)
