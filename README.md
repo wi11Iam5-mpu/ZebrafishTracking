@@ -1,5 +1,5 @@
 # ZebrafishTracking
-This repo is for the paper "3D Visual Tracking of Zebrafish Based on Multi-View Contrastive Association Metric"
+This repo is for the paper "Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective"
 
 # Coming soon
 
