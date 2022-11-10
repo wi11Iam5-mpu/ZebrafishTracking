@@ -1,0 +1,51 @@
+/* world <-> camera correspondences for top view camera */
+[
+    {
+        /* upper left corner of aquarium (as seen from the camera) */
+        "camera": { /* camera coordinates in pixels */
+            "x": 680.0,
+            "y": 135.0
+        },
+        "world": { /* world coordinates (x,y,z) in centimeters */
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        }
+    },
+    {
+        /* upper right corner of aquarium (as seen from the camera) */
+        "camera": { /* camera coordinates in pixels */
+            "x": 1962.0,
+            "y": 151.0
+        },
+        "world": { /* world coordinates (x,y,z) in centimeters */
+            "x": 29.0,
+            "y": 0.0,
+            "z": 0.0
+        }
+    },
+    {
+        /* lower right corner of aquarium (as seen from the camera) */
+        "camera": { /* camera coordinates in pixels */
+            "x": 1969.0,
+            "y": 1460.0
+        },
+        "world": { /* world coordinates (x,y,z) in centimeters */
+            "x": 29.0,
+            "y": 29.0,
+            "z": 0.0
+        }
+    },
+    {
+        /* lower left corner of aquarium (as seen from the camera) */
+        "camera": { /* camera coordinates in pixels */
+            "x": 626.0,
+            "y": 1431.0
+        },
+        "world": { /* world coordinates (x,y,z) in centimeters */
+            "x": 0.0,
+            "y": 29.0,
+            "z": 0.0
+        }
+    }
+]

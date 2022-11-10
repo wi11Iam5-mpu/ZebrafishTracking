@@ -5,7 +5,7 @@ This repo is for the paper "Online 3D Reconstruction of Zebrafish Behavioral Tra
 distortion. To cope with that, we propose the view-invariant feature representation and the Kalman filter-based 3D state estimation, and combine the advantages of both to generate robust 3D trajectories. Extensive experiments on public datasets verify the efficiency and effectiveness of the approach.
 
 <div align="center">
-<img src="./illustration.png" width ="800" height ="300" alt="">
+<img src="./figs/illustration.png" width ="800" height ="300" alt="">
 </div>
 
 ## Introduction
@@ -15,8 +15,8 @@ Coming soon
 ## View-invariant Feature Representation
 <div align="center">
 <!-- <img src="./consistency.gif" width ="150" height ="150" alt=""> -->
-<img src="./consistency_o7.gif" width ="150" height ="150" alt="">
-<img src="./coherence.gif" width ="150" height ="150" alt="">
+<img src="./figs/consistency_o7.gif" width ="150" height ="150" alt="">
+<img src="./figs/coherence.gif" width ="150" height ="150" alt="">
 </div>
 
 ## License

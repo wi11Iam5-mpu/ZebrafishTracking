@@ -1,0 +1,40 @@
+RESNET:
+  FIXED_BLOCKS: 2
+
+DATASETS:
+  ZEBRAFISH_IMG:
+    HOME: "D:\\Datasets\\3DZeF20"
+  ZEBRAFISH:
+    HOME: "D:\\Datasets\\ZEBRAFISH_HEAD_SEQ"
+
+VIS:
+  TSNE:
+    SEQ: ["04"]
+    ID: '01'
+    GEN_GIF: False  # False True
+    GEN_CLIP: True
+    START: 150
+    END: 800
+    SEED: -1 # -1
+  MODEL:
+    BS: 2
+    BS_TRAIN: 8
+    SIZE: 64 # 32 224 64 128
+    DEAD_TYPE: 'mlp' #  mlp
+    BACKBONE: 'cdc_resnet18' # resnet18 cdc_resnet18
+    FEAT_DIM: 128
+    EXP_NO: 'exp_35_sharing'
+#    RELOAD: 'D:\Projects\TPL-Zebrafish\data\exp_31_cdc_resnet18_512_mlp_64_bs8\checkpoint_20.pth'
+    RELOAD: ''
+    LR: 0.1
+    LR_DECAY: '40,85,95'
+    #
+    EVAL: 'D:\Projects\TPL-Zebrafish\data\exp_34_sharing_resnet18_256_mlp_64_bs8\checkpoint_50.pth'
+    # TSNE
+    TSNE_SHOW: 'D:\Projects\TPL-Zebrafish\data\exp_26_cdc_resnet18_256_mlp_64_bs4_lr0.1'
+    START: 1
+    END: 34
+
+
+
+## data type: 0: a p
