@@ -51,6 +51,8 @@ Coming soon
   Tst10  | Ours~(RCDN)   |   81.0            | 40.5                    |   62.8            |   897         |   805         |   1702        |   91.1            |   90.1            |   10    |  0              |   244           |   12          |   16.3    
 
 ## Citing 
+Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/).
+
 ```
 Coming soon
 ```
