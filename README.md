@@ -26,7 +26,7 @@ Coming soon
 ## License
 Coming soon
 
-##  Pretained Models
+##  Pretrained Models
 - [x] [ResNet Backbone](https://drive.google.com/file/d/1joZMPoQjrmwq0DgPy7p0v-bvtJQ3CWwM/view?usp=sharing)
 - [x] [RCDN Backbone](https://drive.google.com/file/d/1idm9ZWKeSzVZw1AHVfSfzMfaDRfLjq4P/view?usp=sharing)
 
