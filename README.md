@@ -12,7 +12,7 @@ distortion. To cope with that, we propose the view-invariant feature representat
 Coming soon
 
 
-## View-invariant Feature Representation
+## View-invariant Feature Representation & Trajectories Visualization
 <div align="center">
 <!-- <img src="./consistency.gif" width ="150" height ="150" alt=""><img src="./figs/consistency_o7.gif" width ="150" height ="150" alt=""> -->
 
