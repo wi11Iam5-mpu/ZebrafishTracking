@@ -54,6 +54,11 @@ Coming soon
   Tst10  | Ours~(ResNet+) | 77.9                    |   40.7            | 58.2                    | 1043                |  926                |  1969               |  89.7                   |  88.6                   |   10    |  0              | 263                   | 18                  | 14.9                   
   Tst10  | Ours~(RCDN)   |   81.0            | 40.5                    |   62.8            |   897         |   805         |   1702        |   91.1            |   90.1            |   10    |  0              |   244           |   12          |   16.3    
 
+### MFF baseline
+<div align="center">
+<img src="./figs/MFF.png" width ="850" height ="220" alt="">
+</div>
+
 ## Citing 
 Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/).
 
