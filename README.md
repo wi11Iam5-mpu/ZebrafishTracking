@@ -53,7 +53,17 @@ Coming soon
 - [x] [test@frame&number](https://drive.google.com/drive/folders/1-6iEaO_6t8llUgsdyJzqxWhszG-u5UDY?usp=drive_link)
 
 
-## Citing 
+## Citations
+
+@inproceedings{wu2022online,
+  title={Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective},
+  author={Wu, Zewei and Ke, Wei and Wang, Cui and Zhang, Wei and Xiong, Zhang},
+  booktitle={2022 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  pages={854--859},
+  year={2022},
+  organization={IEEE}
+}
+
 Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/).
 
 ```
