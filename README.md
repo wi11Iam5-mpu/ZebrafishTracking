@@ -1,5 +1,5 @@
 ## ZebrafishTracking
-This repo is for the work of online 3D reconstruction of zebrafish behavioral trajectories
+This repo is for the work of online 3D reconstruction of zebrafish behavioral trajectories.
  
 
 ## View-invariant Feature Representation & Trajectories Visualization
@@ -14,7 +14,7 @@ This repo is for the work of online 3D reconstruction of zebrafish behavioral tr
 </div>
 
 ## License
-Coming soon
+Coming soon.
 
 ##  Pretrained Models
 - [x] [ResNet+ Backbone](https://drive.google.com/file/d/1joZMPoQjrmwq0DgPy7p0v-bvtJQ3CWwM/view?usp=sharing)
@@ -54,7 +54,7 @@ Coming soon
 
 
 ## Citations
-
+```
 @inproceedings{wu2022online,
   title={Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective},
   author={Wu, Zewei and Ke, Wei and Wang, Cui and Zhang, Wei and Xiong, Zhang},
@@ -63,6 +63,7 @@ Coming soon
   year={2022},
   organization={IEEE}
 }
+```
 
 Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/).
 
