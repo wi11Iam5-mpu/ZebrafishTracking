@@ -66,15 +66,3 @@ Coming soon.
 ```
 
 Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/).
-
-```
-@INPROCEEDINGS{fish_tracker,
-  author={Wu, Zewei and Ke, Wei and Wang, Cui and Zhang, Wei and Xiong, Zhang},
-  booktitle={2022 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)}, 
-  title={Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective}, 
-  year={2022},
-  volume={},
-  number={},
-  pages={854-859},
-  doi={10.1109/BIBM55620.2022.9994955}}
-```
