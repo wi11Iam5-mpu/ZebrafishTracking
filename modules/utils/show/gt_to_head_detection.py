@@ -27,7 +27,7 @@ def main(index):
         fr'D:\Datasets\3DZeF20\train\ZebraFish-{index}\processed\boundingboxes_2d_cam2.csv'
         # fr"D:\MOT_Research\MOT3D\FishTracking\sequences\{index}\detection\gt\processed\boundingboxes_2d_cam2.csv"
     )
-    gt_file = Path(fr"D:\Projects\FishTracking\sequences\{index}\gt\gt.txt")
+    gt_file = Path(fr"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\{index}\gt\gt.txt")
     gt_df = pd.read_table(gt_file, sep=',')
     frame_df = gt_df[['frame']]
     frame_df.columns = ['Frame']

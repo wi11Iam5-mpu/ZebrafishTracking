@@ -272,20 +272,24 @@ def main():
         'train': ['01', '02', '03', '04'],
         # 'train': ['03', '04'],
         # 'train': ['01'],
-        # 'test': ['05', '06', '07', '08']
+        'test': ['05', '06', '07', '08']
+        # 'test': ['08']
     }
     # detections = r'gt_h\2d_detections'
-    detections = r'ddetr_h\2d_detections'
+    # detections = r'ddetr_h\2d_detections'
     # detections = r'yolo4_h_zy\2d_detections'
+    detections = r'yolox_h_hc\2d_detections'
     # detections = r'yolox_h_sc\2d_detections'
     print(fr"We use the [{detections}] detections")
     for key in index_dict.keys():
         for index in index_dict[key]:
-            det_dir = fr"D:\Projects\FishTracking\sequences\detections\{detections}\{index}"
+            det_dir = fr"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\detections\{detections}\{index}"
             img_dir = fr'D:\Datasets\3DZeF20\{key}\ZebraFish-{index}'
             gt_dir = fr'D:\Datasets\3DZeF20\{key}\ZebraFish-{index}\gt\gt.txt'
-            weight_dir = r'D:\Projects\FishTracking\modules\deep\weight' \
+            weight_dir = r'D:\Projects\FishTracking\for_release\ZebrafishTracking\modules\deep\weight' \
                          r'\exp_res_4data_03_cdc_resnet18_128_mlp_64_bs128_checkpoint_223.pth '
+                         # r'\exp2-s4_(db1-0.1-r16)_cut([30, 65 ,100, 125][8][0.001]150)_se_dpb_cdc_resnet18_512_mlp_64_bs128_temp0.2_siamFalse_checkpoint_62.pth '
+                         # ''
                          # r'\exp_24__temp0_2_resnet18_128_linear_64_bs32_checkpoint_54.pth '
             # weight_dir = None
             start = time.time()
@@ -309,10 +313,10 @@ def evaluate():
 
     for key in index_dict.keys():
         for index in index_dict[key]:
-            det_dir = fr"D:\Projects\FishTracking\sequences\detections\gt_h\{index}"
+            det_dir = fr"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\detections\gt_h\{index}"
             img_dir = fr'D:\Datasets\3DZeF20\{key}\ZebraFish-{index}'
             gt_dir = fr'D:\Datasets\3DZeF20\{key}\ZebraFish-{index}\gt\gt.txt'
-            weight_dir = r'D:\Projects\FishTracking\modules\deep\weight' \
+            weight_dir = r'D:\Projects\FishTracking\for_release\ZebrafishTracking\modules\deep\weight' \
                          r'\resnet18_o21_bs128_e12.pth '
             # weight_dir = None
             start = time.time()

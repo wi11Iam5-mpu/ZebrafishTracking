@@ -44,7 +44,7 @@ def put_mask(frame, bbox1):
     return mask_img
 
 
-# D:\Projects\FishTracking\sequences\detections\yolo4_h_zy\2d_detections\01
+# D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\detections\yolo4_h_zy\2d_detections\01
 
 detections = 'yolox_h_hc'  # 'yolo4_h_zy'
 
@@ -52,7 +52,7 @@ detections = 'yolox_h_hc'  # 'yolo4_h_zy'
 def main(seq_index='01'):
     videos = ['cam1', 'cam2']
     input_path = Path(
-        r"D:\Projects\FishTracking\sequences")
+        r"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences")
 
     raw_video1 = input_path / 'videos' / seq_index / 'cam1.mp4'
     raw_video2 = input_path / 'videos' / seq_index / 'cam2.mp4'

@@ -1,0 +1,23 @@
+Category:3D-0.5
+MOTA = 94.9%
+MOTAL = 95.0%
+MOTP = 0.088
+Precision = 97.5%
+Recall = 97.5%
+ID Recall = 88.9%
+ID Precision = 88.9%
+ID F1-score = 88.9%
+Mostly Tracked = 2
+Partially Tracked = 0
+Mostly Lost = 0
+False Positives = 356
+False Negatives = 363
+Identity Swaps = 10
+Fragments = 102
+MTBF-std = 130.963
+MTBF-mono = 66.729
+Total GT points = 14376
+Total Detected points = 14369
+Number of frames = 7188
+
+

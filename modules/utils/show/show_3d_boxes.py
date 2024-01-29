@@ -10,10 +10,6 @@ import torch.nn.functional as F
 from matplotlib import pyplot as plt
 from packaging import version
 
-from modules.trackers.mht.mht import MHTTracker
-from modules.trackers.sort.sort_3d_weighted import Detection3D, Sort3DWeighted
-from modules.trackers.tracker_base import ConstructFirstMethod
-
 if version.parse(sklearn.__version__) > version.parse("0.22"):
     import joblib
 else:
@@ -165,7 +161,7 @@ ax1.view_init(25, 45)
 index = '02'
 frame = 99
 
-calibration_path = Path(fr"D:\Projects\FishTracking\sequences\calibrations\{index}")
+calibration_path = Path(fr"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\calibrations\{index}")
 # Reading calibration weight
 cam1_obj = calibration_path / 'cam1.pkl'
 cam2_obj = calibration_path / 'cam2.pkl'
@@ -176,7 +172,7 @@ cam1_obj.calcExtrinsicFromJson(calibration_path / 'cam1_references.json')
 cam2_obj = joblib.load(cam2_obj)
 cam2_obj.calcExtrinsicFromJson(calibration_path / 'cam2_references.json')
 
-gt_file = Path(fr"D:\Projects\FishTracking\sequences\gt_files\{index}\gt.txt")
+gt_file = Path(fr"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\gt_files\{index}\gt.txt")
 
 # ['frame', 'id', '3d_x', '3d_y', '3d_z', 'camT_x', 'camT_y', 'camT_left',
 #        'camT_top', 'camT_width', 'camT_height', 'camT_occlusion', 'camF_x',

@@ -1,0 +1,12 @@
+2021-10-23 16:27:11.311743
+['02', '04'], {'cost_threshold': 0.5}
+2021-10-23 17:51:11.662945
+['02', '04'], {'app_ratio_3d': 0.2}
+2021-10-23 20:03:06.776012
+['02', '04'], {'app_ratio_3d': 0.1}
+2022-05-15 21:32:58.543174
+['02', '03', '04'], {'app_ratio_3d': 0.30000000000000004, 'cost_threshold': 2.1, 'max_age': 50.0, 'max_app_thresh': 0.1, 'max_err_thresh': 60.0, 'min_err_thresh': 5.0}
+2022-06-03 03:53:34.392334
+['01', '02', '03', '04'], {'app_ratio_3d': 0.1, 'cost_threshold': 4.7, 'max_age': 75.0, 'max_app_thresh': 0.7000000000000001, 'max_err_thresh': 25.0, 'min_err_thresh': 80.0, 'min_hits': 0.0}
+2022-06-05 22:20:57.353125
+['01', '02', '03', '04'], {'app_ratio_3d': 0.1, 'cost_threshold': 1.3, 'max_age': 75.0, 'max_app_thresh': 0.30000000000000004, 'max_err_thresh': 60.0, 'min_err_thresh': 50.0, 'min_hits': 0.0}

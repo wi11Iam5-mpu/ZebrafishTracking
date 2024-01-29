@@ -24,7 +24,7 @@ def main(index, cam='cam1'):
     )
 
     xy_file = Path(
-        fr'D:\Projects\FishTracking\sequences\detections\yolo4_h_zy\2d_detections\{index}\detections_2d_{cam}.csv'
+        fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\detections\yolo4_h_zy\2d_detections\{index}\detections_2d_{cam}.csv'
     )
 
     side = 0

@@ -53,7 +53,7 @@ def objective(args):
     )
     run_terminal(
         "cmd.exe /c" +
-        fr"python D:\Projects\FishTracking\experiments\exp2-track.py "
+        fr"python D:\Projects\FishTracking\for_release\ZebrafishTracking\experiments\exp2-track.py "
         fr"--max_age {int(args['max_age'])} "
         # fr"--min_hits {int(args['min_hits'])} "
         fr"--cost_threshold {args['cost_threshold']} "
@@ -72,7 +72,7 @@ def objective(args):
         print(args, file=f)
         seqs = [seq['index'] for seq in SEQUENCES]
         for data_index in seqs:
-            metrics_file_path = fr"D:\Projects\FishTracking\sequences\outputs\{data_index}"
+            metrics_file_path = fr"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\outputs\{data_index}"
             csv_file = Path(metrics_file_path) / 'metrics' / 'MOT_Metrics.csv'
             df = pd.read_csv(csv_file, sep=';')
             mota = (df['MOTA'].str.strip("%").astype(float) / 100).values[0]

@@ -3,7 +3,7 @@ import time
 
 from configs.config import configs, SEQUENCES
 from modules.data import ZebrafishSequence, ZebrafishDetSimple
-from modules.trackers.Tracker import MHPTracker
+from modules.trackers.Tracker import FishTracker
 from modules.utils.eval.evaluation import get_metrics
 from modules.utils.misc import time_count
 
@@ -53,8 +53,7 @@ def main(configures, args) -> None:
             params['max_err_thresh'] = args.max_err_thresh
             params['max_app_thresh'] = args.max_app_thresh
 
-        eg = MHPTracker(**cfg)
-        # eg.dotracking(seqs[index], tracker='mht')
+        eg = FishTracker(**cfg)
         eg.dotracking(seqs[index], tracker='')
 
         del eg

@@ -63,16 +63,16 @@ def main(seq_index, method):
     code = 'MP4V'
     videos = ['cam1', 'cam2']
     input_path = Path(
-        r"D:\Projects\FishTracking\sequences")
+        r"/sequences")
 
     if method == 'naive':
-        show_trk = fr'D:\Projects\FishTracking\sequences\baseline\naive\ZebraFish-{seq_index}.txt'
+        show_trk = fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\baseline\naive\ZebraFish-{seq_index}.txt'
     elif method == 'gt':
-        show_trk = fr'D:\Projects\FishTracking\sequences\baseline\gt\ZebraFish-{seq_index}.txt'
+        show_trk = fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\baseline\gt\ZebraFish-{seq_index}.txt'
     elif method == 'mvi':
-        show_trk = fr'D:\Projects\FishTracking\sequences\baseline\mvi\ZebraFish-{seq_index}.txt'
+        show_trk = fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\baseline\mvi\ZebraFish-{seq_index}.txt'
     elif method == 'our':
-        show_trk = fr'D:\Projects\FishTracking\sequences\baseline\our\ZebraFish-{seq_index}.txt'
+        show_trk = fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\baseline\our\ZebraFish-{seq_index}.txt'
     else:
         show_trk = input_path / 'outputs' / seq_index / 'all_dets.csv'
 

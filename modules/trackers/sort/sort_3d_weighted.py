@@ -138,7 +138,7 @@ class Kalman3DPointTracker(object):
 
 
 def linear_assignment(cost_matrix):
-    print(cost_matrix)
+    # print(cost_matrix)
     try:
         import lap
         _, x, y = lap.lapjv(cost_matrix, extend_cost=True)
@@ -226,18 +226,10 @@ def iou_scoring(boxA, boxB):
 
 
 def cost_calc(det_current, det_tracker, app_item_weight=0.2, mean=None, cov=None):
-    def normalization(data):
-        _range = np.max(data) - np.min(data)
-        if _range != 0:
-            return (data - np.min(data)) / _range
-        else:
-            return (data - np.min(data)) * _range
-
     def calc_embedding_distance(e1, e2, size=512):
         e1, e2 = np.array(e1), np.array(e2)
         e1, e2 = torch.from_numpy(e1), torch.from_numpy(e2)
         e1, e2 = e1.view(-1, size), e2.view(-1, size)
-        # return F.pairwise_distance(e1, e2, 2).numpy()
         return 1 - (F.cosine_similarity(e1, e2).numpy() + 1) / 2
 
     def euclidean_distances(current_point, track_point):
@@ -289,83 +281,29 @@ def cost_calc(det_current, det_tracker, app_item_weight=0.2, mean=None, cov=None
     euclidean_dist_matrix = euclidean_distances(current_coordinates, tracker_coordinates)
     euclidean_dist_matrix = 1 - np.exp(-euclidean_dist_matrix / 5)
     velocity_dist_matrix = np.abs(np.array(current_velocity) - np.array(tracker_velocity))
-    current_iou_matrix = np.array(current_iou_matrix)
-    tracker_iou_matrix = np.array(current_iou_matrix)
-    iou_cost_matrix = 0.5 * (current_iou_matrix + tracker_iou_matrix)
+    # current_iou_matrix = np.array(current_iou_matrix)
+    # tracker_iou_matrix = np.array(tracker_iou_matrix)
 
     # calc delta_frames  np.pow(decay, delta_frames)  ==> decay = 0.8
     app_simt_matrix = calc_embedding_distance(current_top_embeddings, tracker_top_embeddings,
                                               size=tracker_top_embeddings[0].shape[0])
     app_simf_matrix = calc_embedding_distance(current_front_embeddings, tracker_front_embeddings,
                                               size=tracker_top_embeddings[0].shape[0])
-    # app_cost_matrix = 0.5 * normalization(app_simt_matrix + app_simf_matrix)
-    #
+
     mask = np.where((app_simt_matrix - app_simf_matrix) < 0, 1, 0)
     app_cost_matrix = app_simt_matrix * mask + app_simf_matrix * (1 - mask)
-    # app_cost_matrix = 0.5 * (app_simt_matrix + app_simf_matrix)
-    app_cost_matrix = np.multiply(app_cost_matrix, np.asarray([pow(0.98, d) for d in delta_frames]))
+    app_item_weight = np.multiply(app_item_weight, np.asarray([pow(0.9, d-1) for d in delta_frames]))
     # print(delta_frames)
 
+    iou_cost_matrix = (1 - app_item_weight) * euclidean_dist_matrix + app_item_weight * app_cost_matrix
+    # print(app_item_weight)
+
     return euclidean_dist_matrix.reshape(n, m), \
-           velocity_dist_matrix.reshape(n, m), \
-           app_cost_matrix.reshape(n, m), \
-           app_simt_matrix.reshape(n, m), \
-           app_simf_matrix.reshape(n, m), \
-           iou_cost_matrix.reshape(n, m)
-
-
-def associate_detections_to_trackers(detections, trackers, cost_threshold=5, app_item_weight=0.2,
-                                     mean=None, cov=None, images_path=None):
-    """
-    Assigns detections to tracked object (both represented as bounding boxes)
-    Returns 3 lists of matches, unmatched_detections and unmatched_trackers
-    """
-    if len(trackers) == 0:
-        return np.empty((0, 2), dtype=int), np.arange(len(detections)), np.empty((0, 3), dtype=int)
-
-    eu_cost_matrix, vel_cost_matrix, \
-    app_cost_matrix, \
-    appt_cost_matrix, \
-    appf_cost_matrix, \
-    iou_cost_matrix = cost_calc(detections, trackers,
-                                app_item_weight=app_item_weight,
-                                mean=mean, cov=cov)
-
-    # Eliminate objects that exceed the threshold
-    # cost_matrix = eu_cost_matrix
-    cost_matrix = (1 - app_item_weight) * eu_cost_matrix + app_item_weight * app_cost_matrix
-    # cost_matrix = (1 - app_item_weight) * (1 - iou_cost_matrix) + app_item_weight * app_cost_matrix
-    # cost_matrix = (1 - app_item_weight) * eu_cost_matrix + app_item_weight * (1 - iou_cost_matrix)
-    # cost_matrix = (1 - app_item_weight) * vel_cost_matrix + app_item_weight * app_cost_matrix
-    # cost_matrix = (1 - app_item_weight) * mahala_dist_matrix + app_item_weight * app_cost_matrix
-
-    matched_indices = linear_assignment(cost_matrix)
-
-    unmatched_detections = []
-    for d, det in enumerate(detections):
-        if d not in matched_indices[:, 0]:
-            unmatched_detections.append(d)
-
-    unmatched_trackers = []
-    for t, trk in enumerate(trackers):
-        if t not in matched_indices[:, 1]:
-            unmatched_trackers.append(t)
-
-    # filter out matched with high dist
-    matches = []
-    for m in matched_indices:
-        if cost_matrix[m[0], m[1]] > cost_threshold:
-            unmatched_detections.append(m[0])
-            unmatched_trackers.append(m[1])
-        else:
-            matches.append(m.reshape(1, 2))
-
-    if len(matches) == 0:
-        matches = np.empty((0, 2), dtype=int)
-    else:
-        matches = np.concatenate(matches, axis=0)
-
-    return matches, np.array(unmatched_detections), np.array(unmatched_trackers)
+        velocity_dist_matrix.reshape(n, m), \
+        app_cost_matrix.reshape(n, m), \
+        app_simt_matrix.reshape(n, m), \
+        app_simf_matrix.reshape(n, m), \
+        iou_cost_matrix.reshape(n, m)
 
 
 class Sort3DWeighted(object):
@@ -379,6 +317,63 @@ class Sort3DWeighted(object):
         self.app_item_weight = app_item_weight
         self.trackers = []
         self.frame_count = 0
+
+        self.app_profile = []
+        self.euc_profile = []
+        self.fusion_profile = []
+
+    def associate_detections_to_trackers(self, detections, trackers, cost_threshold=5, app_item_weight=0.2,
+                                         mean=None, cov=None, images_path=None):
+        """
+        Assigns detections to tracked object (both represented as bounding boxes)
+        Returns 3 lists of matches, unmatched_detections and unmatched_trackers
+        """
+        if len(trackers) == 0:
+            return np.empty((0, 2), dtype=int), np.arange(len(detections)), np.empty((0, 3), dtype=int)
+
+        eu_cost_matrix, vel_cost_matrix, \
+            app_cost_matrix, \
+            appt_cost_matrix, \
+            appf_cost_matrix, \
+            iou_cost_matrix = cost_calc(detections, trackers,
+                                        app_item_weight=app_item_weight,
+                                        mean=mean, cov=cov)
+
+        self.app_profile.append(app_cost_matrix)
+        self.euc_profile.append(eu_cost_matrix)
+
+        # Eliminate objects that exceed the threshold
+        cost_matrix = (1 - app_item_weight) * eu_cost_matrix + app_item_weight * app_cost_matrix
+        self.fusion_profile.append(iou_cost_matrix)
+        self.fusion_profile.append(cost_matrix)
+
+        matched_indices = linear_assignment(cost_matrix)
+
+        unmatched_detections = []
+        for d, det in enumerate(detections):
+            if d not in matched_indices[:, 0]:
+                unmatched_detections.append(d)
+
+        unmatched_trackers = []
+        for t, trk in enumerate(trackers):
+            if t not in matched_indices[:, 1]:
+                unmatched_trackers.append(t)
+
+        # filter out matched with high dist
+        matches = []
+        for m in matched_indices:
+            if cost_matrix[m[0], m[1]] > cost_threshold:
+                unmatched_detections.append(m[0])
+                unmatched_trackers.append(m[1])
+            else:
+                matches.append(m.reshape(1, 2))
+
+        if len(matches) == 0:
+            matches = np.empty((0, 2), dtype=int)
+        else:
+            matches = np.concatenate(matches, axis=0)
+
+        return matches, np.array(unmatched_detections), np.array(unmatched_trackers)
 
     def update(self, dets):
 
@@ -400,9 +395,9 @@ class Sort3DWeighted(object):
             trk.top_theta, trk.front_theta = kf.top_theta, kf.front_theta
             trk.top_embedding, trk.front_embedding = kf.top_embedding, kf.front_embedding
 
-        matched, unmatched_dets, unmatched_trks = associate_detections_to_trackers(dets, trks,
-                                                                                   self.cost_threshold,
-                                                                                   self.app_item_weight)
+        matched, unmatched_dets, unmatched_trks = self.associate_detections_to_trackers(dets, trks,
+                                                                                        self.cost_threshold,
+                                                                                        self.app_item_weight)
 
         # update matched trackers with assigned detections
         for m in matched:

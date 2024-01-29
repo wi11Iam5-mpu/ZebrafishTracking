@@ -612,6 +612,7 @@ if __name__ == "__main__":
     else:
         sequences = args["sequences"]
 
+    PROJECT_BASE = Path(r"D:\Projects\FishTracking\for_release\ZebrafishTracking")
     for data_index in sequences:
         print(rf"========================{data_index}=================================")
         index = re.findall(r"[0-9]", data_index)
@@ -619,9 +620,13 @@ if __name__ == "__main__":
         args["thresh"] = 0.5
         args["task"] = '3D'
         args["useMOTFormat"] = True
-        args["detCSV"] = fr'D:\Projects\FishTracking\sequences\outputs\{index}\{target}.csv'
-        args["gtCSV"] = fr'D:\Projects\FishTracking\sequences\gt_files\{index}\annotations_full.csv'
+        args["detCSV"] = fr'{PROJECT_BASE}\sequences\outputs\{index}\{target}.csv'
+        args["gtCSV"] = fr'{PROJECT_BASE}\sequences\gt_files\{index}\annotations_full.csv'
         args["outputFile"] = fr'MOT_Metrics.txt'
-        args["outputPath"] = fr'D:\Projects\FishTracking\sequences\outputs\{index}\metrics'
+        args["outputPath"] = fr'{PROJECT_BASE}\sequences\outputs\{index}\metrics'
 
         MOT_Evaluation(args)
+
+
+
+

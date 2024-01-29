@@ -23,11 +23,11 @@ detection = 'yolox_h_hc'
 
 def main(index, cam='cam1'):
     output = Path(
-        fr'D:\Projects\FishTracking\sequences\detections\{detection}\2d_detections\{index}\detections_2d_{cam}.csv'
+        fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\detections\{detection}\2d_detections\{index}\detections_2d_{cam}.csv'
     )
 
     xy_file = Path(
-        fr'D:\Projects\FishTracking\sequences\detections\{detection}\2d_detections\{index}\boundingboxes_2d_{cam}.csv'
+        fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\detections\{detection}\2d_detections\{index}\boundingboxes_2d_{cam}.csv'
     )
 
     xy_df = pd.read_table(xy_file, sep=',')

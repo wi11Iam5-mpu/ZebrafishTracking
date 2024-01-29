@@ -94,7 +94,7 @@ def plot_results(_index):
     # Initialize scatters
     # np.random.seed(666)
     raw_data = pd.read_csv(
-        fr'D:\Projects\FishTracking\sequences\outputs\{_index}\tracks_3d_interpolated.csv')
+        fr'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\outputs\{_index}\tracks_3d_interpolated.csv')
     raw_data.columns = ['frame', 'id', '3d_x', '3d_y', '3d_z']
     ids = raw_data['id'].unique()
     frames = raw_data['frame'].unique()

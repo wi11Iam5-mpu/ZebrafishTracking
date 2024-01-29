@@ -77,7 +77,7 @@ timetext = ax1.text(20, 0, 40, '')
 
 
 raw_data = pd.read_csv(
-    r'D:\Projects\FishTracking\sequences\outputs\04\tracks_3d_interpolated.csv')
+    r'D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences\outputs\04\tracks_3d_interpolated.csv')
 raw_data.columns = ['frame', 'id', '3d_x', '3d_y', '3d_z']
 
 ids = raw_data['id'].unique()

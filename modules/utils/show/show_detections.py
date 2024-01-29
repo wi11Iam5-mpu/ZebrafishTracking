@@ -57,7 +57,7 @@ detections = 'gt_h'  # 'yolo4_h_zy'
 def main(seq_index='01'):
     videos = ['cam1', 'cam2']
     input_path = Path(
-        r"D:\Projects\FishTracking\sequences")
+        r"D:\Projects\FishTracking\for_release\ZebrafishTracking\sequences")
 
     raw_video1 = input_path / 'videos' / seq_index / 'cam1.mp4'
     raw_video2 = input_path / 'videos' / seq_index / 'cam2.mp4'

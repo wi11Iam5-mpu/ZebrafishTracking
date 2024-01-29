@@ -1,0 +1,2 @@
+MOTA;MOTAL;MOTP;Precision;Recall;ID Recall;ID Precision;ID F1-score;Mostly Tracked;Partially Tracked;Mostly Lost;False Positives;False Negatives;Identity Swaps;Fragments;MTBF-std;MTBF-mono
+97.7%;97.7%;0.070;98.9%;98.8%;98.8%;98.9%;98.8%;2;0;0;41;43;0;14;222.312;114.742
