@@ -22,6 +22,8 @@ Coming soon
 ## License
 Coming soon
 
+## Extracted Features
+- [x] [YOLOX Base] (https://drive.google.com/file/d/1bREk-4ykNdwcErjVXS91VqC9DfnxQiXr/view?usp=drive_link)
 ##  Pretained Models
 - [x] [ResNet Backbone](https://drive.google.com/file/d/1joZMPoQjrmwq0DgPy7p0v-bvtJQ3CWwM/view?usp=sharing)
 - [x] [RCDN Backbone](https://drive.google.com/file/d/1idm9ZWKeSzVZw1AHVfSfzMfaDRfLjq4P/view?usp=sharing)
