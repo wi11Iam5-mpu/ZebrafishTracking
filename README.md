@@ -1,5 +1,5 @@
 ## ZebrafishTracking
-- This repo is for the paper "Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective" on IEEE BIBM22.
+- The first version is for the paper "Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective" on IEEE BIBM22.
 - The update version is coming soon ...
   
 <div align="center">
