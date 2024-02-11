@@ -3,7 +3,7 @@
 - The update version is coming soon ...
   
 <div align="center">
-<img src="./figs/illustration.png" width ="800" height ="300" alt="">
+<img src="./figs/illustration1.png" width ="800" height ="300" alt="">
 </div>
 
 ## Introduction
