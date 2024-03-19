@@ -1,6 +1,6 @@
 ## ZebrafishTracking
 - The first version is for the paper "Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective" on IEEE BIBM22.
-- The update version is coming soon ...
+- The update version is for the paper "Online 3D behavioral tracking of aquatic model organism with a dual-camera system" on AEI.
   
 <div align="center">
 <img src="./figs/illustration1.png" width ="800" height ="300" alt="">
@@ -52,5 +52,21 @@ Coming soon
 
 ## Citing 
 ```
-Coming soon
+@inproceedings{wu2022online,
+  title={Online 3D reconstruction of zebrafish behavioral trajectories within a holistic perspective},
+  author={Wu, Zewei and Ke, Wei and Wang, Cui and Zhang, Wei and Xiong, Zhang},
+  booktitle={2022 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  pages={854--859},
+  year={2022},
+  organization={IEEE}
+}
+@article{wu2024online,
+  title={Online 3D behavioral tracking of aquatic model organism with a dual-camera system},
+  author={Wu, Zewei and Wang, Cui and Zhang, Wei and Sun, Guodong and Ke, Wei and Xiong, Zhang},
+  journal={Advanced Engineering Informatics},
+  volume={61},
+  pages={102481},
+  year={2024},
+  publisher={Elsevier}
+}
 ```
