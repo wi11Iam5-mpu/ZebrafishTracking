@@ -6,19 +6,12 @@
 <img src="./figs/illustration1.png" width ="800" height ="300" alt="">
 </div>
 
-## Introduction
-Coming soon
-
-
 ## View-invariant Feature Representation
 <div align="center">
 <!-- <img src="./consistency.gif" width ="150" height ="150" alt=""> -->
 <img src="./figs/consistency_o7.gif" width ="150" height ="150" alt="">
 <img src="./figs/coherence.gif" width ="150" height ="150" alt="">
 </div>
-
-## License
-Coming soon
 
 ## Extracted Features
 - [x] [YOLOX Base](https://drive.google.com/file/d/1bREk-4ykNdwcErjVXS91VqC9DfnxQiXr/view?usp=drive_link)
@@ -50,7 +43,16 @@ Coming soon
   Tst10  | Ours~(ResNet) | 77.9                    |   40.7            | 58.2                    | 1043                |  926                |  1969               |  89.7                   |  88.6                   |   10    |  0              | 263                   | 18                  | 14.9                   
   Tst10  | Ours~(RCDN)   |   81.0            | 40.5                    |   62.8            |   897         |   805         |   1702        |   91.1            |   90.1            |   10    |  0              |   244           |   12          |   16.3    
 
+## MFF method
+<div align="center">
+<img src="./figs/MFF.png" width ="850" height ="220" alt="">
+</div>
+
+## Simulation data
+- [x] [test@frame&number](https://drive.google.com/drive/folders/1-6iEaO_6t8llUgsdyJzqxWhszG-u5UDY?usp=drive_link)
+
 ## Citing 
+Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/).
 ```
 @inproceedings{wu2022online,
   title={Online 3D reconstruction of zebrafish behavioral trajectories within a holistic perspective},
