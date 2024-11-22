@@ -1,6 +1,6 @@
 ## ZebrafishTracking
 - The first version is for the paper "Online 3D Reconstruction of Zebrafish Behavioral Trajectories within A Holistic Perspective" on IEEE BIBM22.
-- The update version is for the paper "Online 3D behavioral tracking of aquatic model organism with a dual-camera system" on AEI.
+- The updated version is for the paper "Online 3D behavioral tracking of aquatic model organism with a dual-camera system" on AEI.
   
 <div align="center">
 <img src="./figs/illustration1.png" width ="800" height ="300" alt="">
