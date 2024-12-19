@@ -52,7 +52,7 @@
 - [x] [test@frame&number](https://drive.google.com/drive/folders/1-6iEaO_6t8llUgsdyJzqxWhszG-u5UDY?usp=drive_link)
 
 ## Citing 
-Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/).
+Thanks to the authors of ["3DZeF"](https://vap.aau.dk/3d-zef/) and ["SORT"](https://github.com/abewley/sort).
 ```
 @inproceedings{wu2022online,
   title={Online 3D reconstruction of zebrafish behavioral trajectories within a holistic perspective},
